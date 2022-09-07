@@ -1,0 +1,21 @@
+input{
+    display: block;
+    margin: 30px auto;
+    padding: 8px;
+    width: 94%;
+    border-radius: 5px;
+    max-width:  97%;
+    border: 1px solid darkgrey;
+    outline: transparent;
+   
+}
+label{
+   display: block;
+   margin-top: 15px;
+   font-weight: bolder;
+}
+.btn-button{
+    background-color: purple;
+}
+
+
