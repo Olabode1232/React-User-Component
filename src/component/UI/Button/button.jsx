@@ -4,7 +4,7 @@ import "../Button/button.css"
 
 
 function Button(props) {
-    return <button>{props.children}</button>
+    return <button onClick={props.onClick}>{props.children}</button>
 }
 
 export default Button
