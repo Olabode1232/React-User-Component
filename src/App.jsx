@@ -1,12 +1,26 @@
 import React, { Component } from "react";
 import AddUser from "./component/Users/addUsers"
+import UsersList from "../src/component/Users/userslist"
 import "./App.css"
+// import ErrorModal from "./component/UI/errorModal"; 
 
 
-function App() {
+
+function App( props) {
+  const [renUser, setRenUser] = React.useState([])
+  const addHandler = (Uname, Uage) => {
+    setRenUser((prevState) => {
+      return[...prevState, {name:Uname, age:Uage, id:Math.random().toString}] 
+    })
+  }
+ 
   return <div className="app">
-    <AddUser/>
+    <AddUser onAddUser={addHandler}/>
+    <UsersList users={renUser} />  
+    {/* <ErrorModal/>   */}
+    
   </div>;
 }
 
 export default App;
+ 

@@ -33,11 +33,11 @@ function AddUser(props) {
     if(enteredUsername.trim().length === 0 || enteredAge.trim().length === 0){
         return;
     }
-    if(enteredAge < 0){
+    if(+enteredAge < 0){
         return;
     }
     // console.log(enterednameAndAge)
-    console.log(enteredUsername, enteredAge);
+  props.onAddUser(enteredUsername, enteredAge)
   };
   return (
     <Card>
@@ -61,6 +61,6 @@ function AddUser(props) {
       </form>
     </Card>
   );
-}
+} 
 
 export default AddUser;
